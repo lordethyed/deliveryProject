@@ -108,5 +108,3 @@ For any questions or support, please contact:
 
 	•	Name: Olzhas Tynyshtyk
 	•	Email: tynyshtyk.olzhas@gmail.com
-
-You can modify the contact section, license section, and repository link as needed.
