@@ -18,27 +18,27 @@ Project Structure
 
 The project follows OOP principles, SOLID principles, and Clean Architecture for maintainability and scalability. The structure is as follows:
 
-/DeliveryApp 
+DeliveryApp/  
+│  
+├── src/  
+│   ├── entities/                # Core business entities  
+│   │   ├── Cart.java            # Cart class for handling user orders  
+│   │   ├── Product.java         # Product class for menu items  
+│   │   └── Restaurant.java      # Restaurant class with a menu of products  
+│   │  
+│   ├── repositories/            # Repository interfaces and implementations  
+│   │   ├── CartRepository.java  # Interface for Cart persistence  
+│   │   └── InMemoryCartRepository.java  # In-memory implementation of CartRepository  
+│   │  
+│   ├── usecases/                # Business logic services (use cases)  
+│   │   ├── CartService.java     # Service for managing cart operations  
+│   │   └── OrderService.java    # Service for handling orders and generating receipts  
+│   │  
+│   ├── interfaces/              # User interface for console interaction  
+│   │   └── DeliveryConsoleUI.java  # Console-based user interaction logic  
+│   │
+│── Main.java            # Main class to run the application  
 │
-├── /src
-│   ├── /entities
-│   │   ├── Cart.java
-│   │   ├── Product.java
-│   │   ├── Restaurant.java
-│   │
-│   ├── /repositories
-│   │   ├── CartRepository.java
-│   │   ├── InMemoryCartRepository.java
-│   │
-│   ├── /usecases
-│   │   ├── CartService.java
-│   │   ├── OrderService.java
-│   │
-│   ├── /interfaces 
-│   │   ├── DeliveryConsoleUI.java
-│   │
-│   ├
-│   --- Main.java
 
 
 Installation and Setup
@@ -86,3 +86,27 @@ Items:
 Burger - $8.99
 Delivery Fee: $5.00
 Total Price: $13.99
+
+
+Architecture
+
+The application follows SOLID principles and Clean Architecture for maintainability, scalability, and separation of concerns.
+
+	•	Entities Layer: Defines the core business objects like Cart, Product, and Restaurant.
+	•	Use Cases Layer: Handles application-specific business logic, such as adding products to the cart and managing orders.
+	•	Interface Layer: Manages user interaction, in this case through the console, using DeliveryConsoleUI.java.
+	•	Repository Layer: Manages data persistence through repository interfaces like CartRepository and in-memory implementations (InMemoryCartRepository).
+	•	Framework Layer: Contains the entry point of the application (Main.java), where the app is initialized.
+
+License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this project with proper attribution.
+
+Contact
+
+For any questions or support, please contact:
+
+	•	Name: Olzhas Tynyshtyk
+	•	Email: tynyshtyk.olzhas@gmail.com
+
+You can modify the contact section, license section, and repository link as needed.
